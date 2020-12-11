@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../global.css">
+    <link rel="stylesheet" href="./style.css" />
+    <title>Document</title>
+</head>
+<body>
+    
+    <div id="form-box">
+        <div id="header-form-box">
+            <p>Registre a dívida do cliente</p>
+        </div>
+        <form>
+            <div class="input-block">
+                <input type="text" name="customer" id="customer" placeholder="Nome do cliente">
+                <input type="email" name="email" id="email" placeholder="Email">
+            </div>
+            
+            <div class="input-block">
+                <input type="text" name="cpf" id="cpf" placeholder="CPF">
+                <input type="number" name="cep" id="cep" placeholder="CEP"> 
+            </div>
+
+            <div class="input-block">
+                <input type="number" name="numberHouse" id="numberHouse" placeholder="Numero da casa">
+                <input type="text" name="complement" id="complement" placeholder="Complemento">
+            </div>
+            
+            <div class="input-block">
+                <input type="number" name="debt-amount" id="debt-amount" placeholder="Valor da Dívida">
+                <select >
+                    <option id="status" value="" hidden >Situação</option>
+                    <option id="status" value="a.C" >Pendente</option>
+                    <option id="status" value="d.C" >Pago</option>               
+                </select>
+            </div>
+
+            <p>Objeto da dívida</p>
+            <textarea id="detailing" rows="4" cols="35" ></textarea>                      
+            
+            <button onclick="" >Registrar</button>
+            <!-- <a href="../index/index.html">home</a> -->
+        </form>
+    </div>
+
+</body>
+</html>

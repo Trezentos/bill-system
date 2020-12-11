@@ -1,0 +1,89 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html{
+    font-family: sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 100vh;
+    background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);
+}
+
+#form-box{
+    
+    border-radius: 5px;
+    overflow: hidden;
+    background: #C9CCD3;
+    background-image: linear-gradient(-180deg, rgba(255,255,255,0.50) 0%, rgba(0,0,0,0.50) 100%);
+    background-blend-mode: lighten;
+    width: 50%;
+    max-width: 330px;
+    min-height: 200px;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+#form-box #header-form-box{
+    color: rgb(99, 96, 96);
+    padding: 10px;
+    font-weight: 400;
+    background-color:  rgba(255,255,255,0.50);
+    width: 100%;
+    text-align: center;
+    margin-bottom: 15px;
+    
+}
+#form-box form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+}
+
+#form-box form input, select, textarea{
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 4px;
+    outline: 0;
+    border: none;
+    width: 98%;
+}
+
+#form-box form select option:nth-child(1){
+    color: gray;
+}
+
+#form-box form button{
+    width: 98%;
+    max-width: 350px;
+    padding: 5px;
+    border: none;
+    border-radius: 4px;
+    background-image: linear-gradient(to top, #0ba360 0%, #3cba92 100%);
+    color: white;
+    cursor: pointer;
+}
+
+#form-box form button:hover{
+    background-image: linear-gradient(to top, #0c8f56 0%, #3cba92 100%);
+    outline: none;
+}
+
+#form-box p{
+    margin-bottom: 2px;
+    color: rgb(99, 96, 96);
+}

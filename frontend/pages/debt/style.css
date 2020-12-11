@@ -1,0 +1,33 @@
+#form-box{
+    max-width: 800px;
+    width: 80%;
+
+    padding-bottom: 15px;
+}
+
+#form-box form{
+    width: 90%;
+
+    margin: 0 auto;
+    
+}
+
+#form-box form .input-block{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+
+}
+
+#form-box form .input-block input, select{    
+    width: 48%;
+    color: rgb(99, 96, 96);
+}
+
+#form-box textarea{
+    resize: vertical;
+    max-height: 200px;
+    min-height: 30px;
+}

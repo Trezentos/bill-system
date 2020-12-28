@@ -6,23 +6,26 @@ const jwt = require('jsonwebtoken');
 const { check, validationResult } = require('express-validator');
 
 router.post('/register',[
-
     check('name', 'Por favor insira um nome de usuário válido').isLength({min: 4}),
     check('password', 'Insira uma senha como mínimo 6 letras').isLength({min: 4}),
     check('email', 'Insira um email válido').isEmail(),
-    
-], async (req, res)=>{
+
+], async (req, res) => {
     const errors = validationResult(req);
 
-    if(!errors.isEmpty()){
+    if (!errors.isEmpty()) {
         return res.status(400).json({errors: errors.array() });
     }
 
     //Checking if the user is already in the database
     const emailExist = await User.findOne({email: req.body.email});
+    if ( emailExist ) {
+        return res.status(400).json({error: "Email já existe no sistema"});
+    }
 
-    if (emailExist) {
-        return res.status(400).json({error: "Email is already exists"});
+    const userNameExist = await User.findOne({name: req.body.name});
+    if( userNameExist ) {
+        return res.status(400).json({error: "Nome já existe nome sistema"});
     }
 
     //Hash the password
@@ -37,7 +40,7 @@ router.post('/register',[
     });
 
     try{
-        const savedUsed = await user.save();
+        await user.save();
         res.send({
             user: user._id
         });
@@ -50,25 +53,27 @@ router.post('/login',[
     check('name', 'Insert a valid name...').isLength({min: 4}),
     check('password', 'Insira uma senha como mínimo 6 letras').isLength({min: 4}),
  ], async (req,res)=>{
-
-     //Checking if the user exists
+  
+    //Checking if the user exists
     const user = await User.findOne({ name: req.body.name });
     if (!user) {
+
         return res.status(400).json({error: "Name or password is wrong"});
+
     }
     //Password is wrong
     const validPass = await bcrypt.compare(req.body.password, user.password);
 
-    if(!validPass) return res.status(400).send({error: 'Name or password is wrong'}); 
+    if (!validPass) return res.status(400).send({error: 'Name or password is wrong'}); 
 
     //Create and assign a token
     const token = await jwt.sign({_id: user._id }, process.env.TOKEN_SECRET);
     res.header('auth-token', token).send({
         token: token,
-        message: "logado",
-     });
+    });
 
-})
+});
+
 
 
 module.exports = router;

@@ -5,22 +5,23 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="../../global.css">
     <title>Document</title>
+    <script defer src="./script.js"></script>
 </head>
 <body>
     
     <div id="form-box">
         <div id="header-form-box">
-            <p>Se Autentifique!</p>
+            <p>Se Autentique!</p>
         </div>
         <form id="loginForm">
             <input type="text" name="user" id="user" value="Gustavo" placeholder="Nome de usuário">
-            <input type="password" name="password" value="12456aaa" id="password" placeholder="Senha">
-            <button >Login</button>
-            <a href="../debt/index.html">debt page</a>
+            <input  name="password" value="123456aaaa" id="password" placeholder="Senha">
+            <p class="error-msg">Nome de usuário ou senha está incorreto</p>
+            <button id="loginBtn" >Login</button>
+            <button id="createBtn" >Criar uma conta</button>
         </form>
     </div>
     
-    <script src="./script.js"></script>
-    <script src="../../script.js"></script>
+    
 </body>
 </html>

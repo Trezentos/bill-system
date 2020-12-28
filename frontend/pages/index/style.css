@@ -1,0 +1,18 @@
+#loginForm {
+    padding-bottom: 10px;
+}
+
+#loginForm .error-msg{
+    color:red;
+    text-align: center;
+    font-size: 13px;
+    display: none;
+}
+
+#loginForm  .show{
+    display: block;
+}
+
+#createBtn {
+    margin-top: 5px;
+}

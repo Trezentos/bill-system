@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../../global.css">
+    <title>Menu</title>
+    <script defer src="./script.js"></script>
+</head>
+<body>
+    
+    <div id="form-box">
+        <div id="header-form-box">
+            <p>Menu</p>
+        </div> 
+        <button id="createDebtBtn"  onclick="window.location.href='../debt/index.html'" >Registrar dívida</button>
+        <button id="listDebtsBtn"  onclick="window.location.href='../debtList/index.html'" >Listar dívidas</button>
+        <button id="backBtn"  onclick="window.location.href='../index/index.html'">Logout</button>
+    </div>
+    
+    <script>
+        const backBtn = document.querySelector('#backBtn');
+        backBtn.addEventListener('click', ()=> {
+            localStorage.setItem('token', '');
+            window.location.href='../index/index.html';
+        })
+    </script>
+</body>
+</html>

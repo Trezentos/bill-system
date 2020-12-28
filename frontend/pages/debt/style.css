@@ -1,13 +1,11 @@
 #form-box{
     max-width: 800px;
     width: 80%;
-
     padding-bottom: 15px;
 }
 
 #form-box form{
     width: 90%;
-
     margin: 0 auto;
     
 }
@@ -26,8 +24,23 @@
     color: rgb(99, 96, 96);
 }
 
+#form-box #justiceNumber{
+    width: 60%;
+}
+
 #form-box textarea{
     resize: vertical;
     max-height: 200px;
     min-height: 30px;
+    font-family: sans-serif;
+    
+}
+
+#form-box #registerBtn{
+    margin-bottom: 10px;
+}
+
+#debt-form #backBtn {
+    height: 25px;
+    width: 100px;
 }

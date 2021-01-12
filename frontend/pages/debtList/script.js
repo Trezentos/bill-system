@@ -1,6 +1,6 @@
 const cards = document.querySelector('.cards');
 
-window.addEventListener('load', async ()=>{
+window.addEventListener('load', async () => {
     try {
         const response = await fetch('http://localhost:3000/api/debt/list', {
             method: 'GET',
@@ -22,7 +22,7 @@ window.addEventListener('load', async ()=>{
                     </div>
                 </div>
                 <div class="content">
-                    <p>Preço: R$${debt.debtAmount} email: ${debt.email}</p>
+                    <p>Preço: R$${debt.debtAmount}, email: ${debt.email}</p>
                     <p>Situação: ${debt.status}</p>
                     <p>Descrição: ${debt.description}</p>
                 </div>

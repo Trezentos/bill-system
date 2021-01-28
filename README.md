@@ -24,7 +24,7 @@ Here we can register the debt and it informations and save all this information 
 
 ![Algorithm schema](./frontend/images/form.PNG)
 
-And finally, our debt list that were registered at the form, we can scroll all debts registered and   update the information in each debt or delete. All of theses debts are registered in MongoDB database and the server is responding and requesting to frontend to show theses informations and each user has their number of debts for themselves.
+And finally, our debt list that were registered at the form, we can scroll all debts registered and   update the information in each debt or delete (CRUD). All of theses debts are registered in MongoDB database and the server is responding and requesting to frontend to show theses informations by HTTP and each user has their number of debts for themselves.
 
 ![Algorithm schema](./frontend/images/debtList.PNG)
 ![Algorithm schema](./frontend/images/mongodatas.PNG)
